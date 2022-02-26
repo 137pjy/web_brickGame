@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="rank.css">
+	<title></title>
+
+
+</head>
+<body>
+	<div id="ranking-title">
+			<h1>FINAL SCORE</h1>
+			<img src="shakingball.gif" id="leftball">
+			<img src="shakingball.gif" id="rightball">
+	</div>
+	<div id="ranking">
+		<table id="ranking-table">
+		
+		</table>
+	</div>
+	<script>
+
+	pid_score_array=[];
+	function idlist(score, pid) {
+	    var pid_score = {
+	        pid: pid,
+	        score: score
+	    };
+    	pid_score_array.push(pid_score);
+    	pid_score_array.sort(NumberCompare);
+    }
+	function NumberCompare(a, b) {
+    	return b.score - a.score;
+	}
+
+	function ranking(){
+		var rankingElem = document.getElementById("ranking");
+    	var printArray = [];
+	    stand=["1ST","2ND","3RD","4TH","5TH","6TH","7TH","8TH","9TH","10TH"];
+
+	    str="<tr><th>STAND</th><th>SCORE</th><th>ID</th></tr>";
+	    for (var i = 0; i < pid_score_array.length; i++) {
+	        if (i >= 11) {
+	            break;
+	        }
+	        str+="<tr><td>"+stand[i]+"</td>"
+	        	+"<td>"+pid_score_array[i].score+"</td>"
+
+	    		+"<td>"+pid_score_array[i].pid+"</td></tr>";
+	      
+	  
+	    }
+	    
+
+	
+	    document.getElementById("ranking-table").innerHTML=str;
+	    //rankingElem.innerHTML = printArray.join("<br/>");
+		
+	}
+
+	id=["player1","player2","player3","player4","player5","player6","player7","player8","player9","player10"];
+	score=[20,100,50,1000,300,400,200,10,800];
+	function append_idlist_print(){
+		for(var i=0;i<id.length;i++){
+			idlist(score[i],id[i]);
+		}
+		ranking();
+
+	}
+	
+	append_idlist_print();
+
+	</script>
+</body>
+</html>

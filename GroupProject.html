@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PoKeMoN Game</title>
+    <link href="GroupProject.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Sunflower:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script type="text/javascript" src="GroupProject.js"></script>
+    <div id = "game-start">
+
+    	<!-- Pokemon Brick Breaker Game Title -->
+    <img id ="game-name" src="https://fontmeme.com/permalink/210511/e2130250c54f5c20c12756b00326acb0.png" alt="pokemon-font" border="0"></a>
+    <!-- Click Anywhere to proceed to differnet menu -->
+    <p id="click">CLICK ANYWHERE TO START</p>
+    <!-- Name of group members -->
+    <p id="group-member">(202012846)장이진 (202012708)박지연 (202013545)아이닌자파 (202013547)아티라후스나 (201811272)이강윤 </p>
+    </div>
+    <div class="character">
+            <p id="name">Choose your character</p>
+            <div id="id">
+                <strong>Insert Your Id</strong>
+                <input id="playerid" type="id" size="15" maxlength="12" />
+                <input  id="enter" type="button" value="Enter"/>
+                <br><br>
+                <strong>Choose the difficulty!<br></strong>
+                <input name="difficulty" type="radio" value="EASY" checked="EASY">EASY
+                <input name="difficulty" type="radio" value="HARD" >HARD<br>
+            </div>
+            <div id="characterphoto">
+            <br>
+            <div id="firstsectionphoto">
+            <img id="photo1" src="photo1.png" alt="character"/>
+            <img id="photo2" src="photo2.png" alt="character"/>
+            <img id="photo3" src="photo3.png" alt="character"/>
+            </div>
+            <img id="choosenchar" src="p1.gif">
+            <div id="secondsectionphoto">
+            <img id="photo4" src="photo4.png" alt="character"/>
+            <img id="photo5" src="photo5.png" alt="character"/>
+            </div>
+            </div>
+    </div>
+    <div class="opening">
+        <video id="openingvideo" controls autoplay>
+            <source src="opening_v.mp4" type="video/mp4">
+            <strong>Your browser does not support the video tag.</strong>
+        </video>
+        <div class="opening-text">
+            <p id="textmessage">>> Welcome to the world of POKEMON!</p>
+            <div id="nextwrapper">
+                <input type="button" id="nextbutton" value="NEXT"></input>
+            </div>
+            <div id="passwrapper">
+                <input type="button" id="passbutton" value="PASS"></input>
+            </div>
+        </div>
+    </div>
+    <div class="firstpage">
+    <audio id="canvasmp3" autoplay></audio>
+    <canvas id="myCanvas" width="860" height="540"></canvas>
+    <aside>
+        <div id="contents">
+            <!-- 플레이어와 스코어, 하이스코어에 각 요소를 가져오기(js) -->
+            <div class="container">
+                <p>남은시간 :<span id="seconds">START</span></p>
+            </div>
+            <p>Player</p>
+            <div id="playername">
+                <!-- <input image--by javascript> -->
+                Player Name
+            </div>
+            <br><br>
+            <div id="score">
+                Score
+            </div>
+            <br><br>
+            <div id=playerimage>
+                <!-- <img id=playerimg alt = "playerimage"> -->
+            </div>
+        </div>
+    </aside>
+    <div id="bottomcontents">
+        <div id="catches">Catches</div>
+        <div id="stagenumber">Stage</div>
+    </div>
+    </div>
+    <div class="middle">
+        <audio id="middlemp3" autoplay></audio>
+        <img src="aimg1.PNG" id="aimg">
+        <div class="middle-text">
+            <p id="mtextmessage">>> To get through this road I have to beat my rival</p>
+            <div id="nextwrapper">
+                <input type="button" id="mnextbutton" value="NEXT"></input>
+            </div>
+            <div id="passwrapper">
+                <input type="button" id="mpassbutton" value="PASS"></input>
+            </div>
+        </div>
+    </div>
+    <div class="score">
+    <div id="finalscore">
+            <h1 id="finalscoreh1"></h1>
+            <audio id="endingmp3" autoplay></audio>
+            <img src="shakingball.gif" id="leftball">
+            <img src="shakingball.gif" id="rightball">
+    </div>
+    <div id="playerscore">
+    </div>
+    </div>
+    
+</body>
+
+</html>
